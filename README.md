@@ -1,3 +1,11 @@
+# notes
+- Postcss not compatible with nuxt3 yet (made it worked https://frontendshape.com/post/how-to-install-tailwind-css-3-in-nuxt-3)
+
+# todo
+- done: configure tailwind
+- install and config typescript
+
+
 # Nuxt 3 Minimal Starter
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
