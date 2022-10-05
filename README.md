@@ -6,6 +6,10 @@
 - done: learn basic vue3 component
 - build basic layout of amazon affiliate link resource page
 - install and config typescript
+- implement typescript
+- check out composables api
+- check out other features of vue3
+- deploy on netlify
 
 
 # Nuxt 3 Minimal Starter
