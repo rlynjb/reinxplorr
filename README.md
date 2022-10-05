@@ -1,10 +1,11 @@
 # notes
-- Postcss not compatible with nuxt3 yet (made it worked https://frontendshape.com/post/how-to-install-tailwind-css-3-in-nuxt-3)
+- Postcss not compatible with nuxt3 yet (UPDATE: made it worked https://frontendshape.com/post/how-to-install-tailwind-css-3-in-nuxt-3)
 
 # todo
 - done: configure tailwind
+- done: learn basic vue3 component
+- build basic layout of amazon affiliate link resource page
 - install and config typescript
-- create your first vue3 script/component in index.vue
 
 
 # Nuxt 3 Minimal Starter
