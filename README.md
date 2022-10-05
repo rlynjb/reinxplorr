@@ -4,6 +4,7 @@
 # todo
 - done: configure tailwind
 - install and config typescript
+- create your first vue3 script/component in index.vue
 
 
 # Nuxt 3 Minimal Starter
