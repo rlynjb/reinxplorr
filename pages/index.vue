@@ -1,11 +1,17 @@
 <template>
 <div class="index-page">
   <div class="index-page__header">
-    <h1>ReinXplorr {{ state.test }}</h1>
+    <h1>{{ state.title }}</h1>
   </div><!-- /header -->
 
   <div class="index-page__content">
-
+    <div class="index-page__card">
+      image,
+      title,
+      desc,
+      link,
+      id
+    </div>
   </div><!-- /content -->
 </div>
 </template>
@@ -17,18 +23,31 @@ export default {
   props: {
     testTitle: String,
   },
+
   setup(props, { emit }) {
     const state = reactive({
-      test: "hello kirby",
+      title: "Rein Merch",
+      affiliateLinks: [
+        {
+          id: '',
+          name: '',
+          image: '',
+          desc: '',
+          link: '',
+        }
+      ],
     });
+
 
     onMounted(() => {
       console.log('on mouuunted....', props.testTitle)
     });
 
+
     const publishedBooksMsg = computed(() => {
       return 123;
     });
+
 
     const methodTest = () => {
       console.log('method Test')
@@ -37,6 +56,7 @@ export default {
         hello: 'world'
       });
     };
+
 
     return {
       state,
@@ -56,5 +76,8 @@ export default {
 }
 .index-page__content {
   @apply col-span-4 grid grid-cols-4;
+}
+.index-page__card {
+  @apply col-span-1;
 }
 </style>
