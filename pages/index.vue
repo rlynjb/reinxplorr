@@ -14,10 +14,12 @@
       <div class="index-page__desc">
         <h6>{{ item.name }}</h6>
         <p>{{ item.desc }}</p>
-        <a :href="item.link" target="_blank">
-          visit
-        </a>
       </div>
+
+      <a class="index-page__desc-link"
+        :href="item.link" target="_blank">
+        visit
+      </a>
     </div>
   </div><!-- /index-page__content -->
 </div><!-- /index-page -->
@@ -117,19 +119,22 @@ export default {
   @apply col-span-4 grid grid-cols-4 gap-4 p-4;
 }
 .index-page__card {
-  @apply col-span-2 p-3;
+  @apply col-span-2;
   border: 1px solid #000;
   border-radius: 5px;
 }
+.index-page__desc {
+  @apply p-3;
+}
 .index-page__desc h6 {
-  @apply mt-3 mb-1;
+  @apply mb-1;
 }
 .index-page__desc p {
   font-size: 0.8em;
   line-height: 1.3;
 }
-.index-page__desc a {
-  @apply mt-4 p-2 bg-indigo-50 text-indigo-900;
+.index-page__desc-link {
+  @apply p-4 bg-indigo-50 text-indigo-900;
   text-align: center;
   display: block;
   font-size: 0.5em;
