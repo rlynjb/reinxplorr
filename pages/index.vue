@@ -109,6 +109,9 @@ export default {
 }
 .index-page__header h1 {
   @apply text-indigo-900;
+  font-size: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 .index-page__content {
   @apply col-span-4 grid grid-cols-4 gap-4 p-4;
