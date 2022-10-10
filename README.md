@@ -4,12 +4,21 @@
 # todo
 - done: configure tailwind
 - done: learn basic vue3 component
-- build basic layout of amazon affiliate link resource page
+- done: build basic layout of amazon affiliate link resource page
 - install and config typescript
 - implement typescript
 - check out composables api
 - check out other features of vue3
 - deploy on netlify
+- improve usability/design (https://material.io/design/communication/imagery.html#thumbnails)
+- filter by category
+
+
+# about app
+affiliate resource page with a mix of printful merch and ecommerce
+
+# learning
+the new vue3, typescript, nuxt3
 
 
 # Nuxt 3 Minimal Starter

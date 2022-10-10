@@ -1,19 +1,26 @@
 <template>
 <div class="index-page">
   <div class="index-page__header">
+    <img class="index-page__header-logo" :src="state.logo" />
     <h1>{{ state.title }}</h1>
-  </div><!-- /header -->
+  </div><!-- /index-page__header -->
 
   <div class="index-page__content">
-    <div class="index-page__card">
-      image,
-      title,
-      desc,
-      link,
-      id
+    <div class="index-page__card"
+      v-for="(item, itemIndex) in state.links"
+      :key="'itemIndex'+itemIndex">
+      <img :src="item.image" />
+
+      <div class="index-page__desc">
+        <h6>{{ item.name }}</h6>
+        <p>{{ item.desc }}</p>
+        <a :href="item.link" target="_blank">
+          visit item
+        </a>
+      </div>
     </div>
-  </div><!-- /content -->
-</div>
+  </div><!-- /index-page__content -->
+</div><!-- /index-page -->
 </template>
 
 <script>
@@ -26,14 +33,36 @@ export default {
 
   setup(props, { emit }) {
     const state = reactive({
-      title: "Rein Merch",
-      affiliateLinks: [
+      title: "Resource Page",
+      logo: "Rein.png",
+      links: [
         {
-          id: '',
-          name: '',
-          image: '',
-          desc: '',
-          link: '',
+          id: 'testid',
+          name: 'testname',
+          image: 'https://via.placeholder.com/200',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed arcu a erat placerat bibendum id nec enim.',
+          link: 'https://google.com',
+        },
+        {
+          id: 'testid',
+          name: 'testname',
+          image: 'https://via.placeholder.com/200',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed arcu a erat placerat bibendum id nec enim.',
+          link: 'https://google.com',
+        },
+        {
+          id: 'testid',
+          name: 'testname',
+          image: 'https://via.placeholder.com/200',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed arcu a erat placerat bibendum id nec enim.',
+          link: 'https://google.com',
+        },
+        {
+          id: 'testid',
+          name: 'testname',
+          image: 'https://via.placeholder.com/200',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed arcu a erat placerat bibendum id nec enim.',
+          link: 'https://google.com',
         }
       ],
     });
@@ -74,10 +103,31 @@ export default {
 .index-page__header {
   @apply col-span-4 text-center p-4 text-red-700;
 }
+.index-page__header-logo {
+  @apply mb-4 ml-auto mr-auto;
+  max-width: 14em;
+}
+.index-page__header h1 {
+  @apply text-indigo-900;
+}
 .index-page__content {
-  @apply col-span-4 grid grid-cols-4;
+  @apply col-span-4 grid grid-cols-4 gap-4 p-4;
 }
 .index-page__card {
-  @apply col-span-1;
+  @apply col-span-2 p-3;
+  border: 1px solid #000;
+}
+.index-page__desc h6 {
+  @apply mt-3 mb-1;
+}
+.index-page__desc p {
+  font-size: 0.8em;
+  line-height: 1.3;
+}
+.index-page__desc a {
+  @apply mt-4 p-2 bg-indigo-50 text-indigo-900;
+  font-size: 0.7em;
+  text-align: center;
+  display: block;
 }
 </style>
