@@ -15,7 +15,7 @@
         <h6>{{ item.name }}</h6>
         <p>{{ item.desc }}</p>
         <a :href="item.link" target="_blank">
-          visit item
+          visit
         </a>
       </div>
     </div>
@@ -119,6 +119,7 @@ export default {
 .index-page__card {
   @apply col-span-2 p-3;
   border: 1px solid #000;
+  border-radius: 5px;
 }
 .index-page__desc h6 {
   @apply mt-3 mb-1;
@@ -129,8 +130,10 @@ export default {
 }
 .index-page__desc a {
   @apply mt-4 p-2 bg-indigo-50 text-indigo-900;
-  font-size: 0.7em;
   text-align: center;
   display: block;
+  font-size: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 </style>
