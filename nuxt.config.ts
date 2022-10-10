@@ -16,4 +16,9 @@ export default defineNuxtConfig({
   css: [
     '@/assets/css/tailwind.css'
   ],
+
+  typescript: {
+    typeCheck: true,
+    strict: true
+  },
 })
