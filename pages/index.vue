@@ -25,10 +25,11 @@
 </div><!-- /index-page -->
 </template>
 
-<script>
-import { reactive, computed } from "vue";
+<script lang="ts">
+import { reactive, computed, defineComponent } from "vue";
+import { data } from "~/lib/data.js";
 
-export default {
+export default defineComponent({
   props: {
     testTitle: String,
   },
@@ -37,36 +38,7 @@ export default {
     const state = reactive({
       title: "Resource Page",
       logo: "Rein.png",
-      links: [
-        {
-          id: 'testid',
-          name: 'testname',
-          image: 'https://via.placeholder.com/200',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed arcu a erat placerat bibendum id nec enim.',
-          link: 'https://google.com',
-        },
-        {
-          id: 'testid',
-          name: 'testname',
-          image: 'https://via.placeholder.com/200',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed arcu a erat placerat bibendum id nec enim.',
-          link: 'https://google.com',
-        },
-        {
-          id: 'testid',
-          name: 'testname',
-          image: 'https://via.placeholder.com/200',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed arcu a erat placerat bibendum id nec enim.',
-          link: 'https://google.com',
-        },
-        {
-          id: 'testid',
-          name: 'testname',
-          image: 'https://via.placeholder.com/200',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed arcu a erat placerat bibendum id nec enim.',
-          link: 'https://google.com',
-        }
-      ],
+      links: data,
     });
 
 
@@ -95,7 +67,7 @@ export default {
       publishedBooksMsg,
     };
   },
-}
+});
 </script>
 
 <style lang="postcss" scoped>
